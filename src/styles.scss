@@ -1,0 +1,238 @@
+//only for private USE --> TEST ONLY
+@font-face {
+    font-family: "FeelingPassionate";
+    src: url(assets/Font/Feeling-Passionate.otf);
+}
+
+// FOR H1 all caps font, free for commercialUse
+@font-face {
+    font-family: "Lovelo";
+    src: url(assets/Font/LoveloBlack.otf);
+}
+
+// FOR H1 After Element all caps font, free for commercialUse
+@font-face {
+    font-family: "LoveloLight";
+    src: url(assets/Font/LoveloLineLight.otf);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: var(--primary-light);
+}
+
+html,
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--primary-dark);
+    scroll-behavior: smooth;
+}
+
+:root {
+    --paddingMain: 5vw;
+    --paddingTopBottom: 100px;
+    --padding-Middle: calc(2em + 2.6vw);
+    --paddingHero: 80px; // bit smaller in hero section and nav
+    --maxwidth: 1400px;
+    --maxwidthMobile: 800px; // for text sections
+    --mobileMarginTop: calc(44px + 3vh);
+    --font-xbold: 800;
+    --font-bold: 600;
+    --font-light: 400;
+    --font-small: 12px;
+    --bg: #030318;
+    --bg-light: rgb(150, 149, 149);
+    --primary-dark: #8d9ab753;
+    --primary-light: #e6e7e8;
+    --secondary: #c0c0c0;
+    --accent: #ead003; // #EAD003
+    --hover: darkgrey;
+}
+
+// only header
+h1 {
+    font-size: calc(3em + 4vw);
+    font-weight: var(--font-xbold);
+    color:rgba(255, 255, 255, 0.274);
+        font-family:'Helvetica Neue';
+
+    // font-family: "Lovelo", sans-serif;
+}
+
+// yellow, brush script
+h2 {
+    font-size: calc(1em + 1.5vw);
+    font-family: "FeelingPassionate";
+    color: var(--accent);
+    letter-spacing: 4px;
+    white-space: nowrap;
+    margin-bottom: 12px;
+    z-index: 200;
+
+    @media only screen and (max-width: 1000px) {
+        text-align: center !important;
+    }
+
+    @media only screen and (max-width: 500px) {
+        line-height: 1.45em;
+        margin-top: 0.3em;
+    }
+}
+
+// watermark in background
+h3 {
+    position: absolute;
+    font-size: calc(1em + 10vw);
+    font-family:'Helvetica Neue';
+    font-weight: var(--font-xbold);
+    letter-spacing: 3px;
+    color: var(--primary-light);
+    filter: opacity(0.2);
+    white-space: nowrap;
+    top: 0;
+    z-index: 0;
+
+    &.h3Right {
+        // until 1000px - center align
+        left: 50%;
+        transform: translateX(-50%) translateY(0.4em);
+
+        @media only screen and (min-width: 1000px) {
+            left: unset;
+            right: 0;
+            transform: translateX(calc(var(--paddingMain) + 0.2em)) translateY(0.3em) !important;
+        }
+        @media only screen and (min-width: 1400px) {
+            transform: translateX(50%) translateY(0.3em) !important;
+            right: 50%;
+        }
+        @media only screen and (min-width: 1600px) {
+            right: 50%;
+            transform: translateX(50%) translateY(0.34em) !important;
+        }
+    }
+
+    &.h3Left {
+        left: 50%;
+        transform: translateX(calc(var(--paddingMain) * (-1) - 0.1em)) translateY(1.4em) !important;
+
+        @media only screen and (min-width: 1400px) {
+            transform: translateX(-50%) translateY(1.3em) !important;
+            transform-origin: left;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(1.8em) !important;
+            }
+        }
+        @media only screen and (max-width: 1400px) {
+            left: 0;
+            transform: translateX(calc(var(--paddingMain) * (-1) - 0.1em)) translateY(1.6em);
+
+            &.contact {
+                left: 0;
+                transform: translateX(calc(var(--paddingMain) * (-1) - 0.1em)) translateY(3em) !important;
+            }
+        }
+        @media only screen and (max-width: 1280px) {
+            left: 0;
+            transform: translateX(calc(var(--paddingMain) * (-1) - 0.1em)) translateY(1.4em) !important;
+            &.contact {
+                left: 0;
+                transform: translateX(calc(var(--paddingMain) * (-1) - 0.1em)) translateY(2.25em) !important;
+            }
+        }
+        @media only screen and (max-width: 1000px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(1.4em) !important;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(3.5em) !important;
+            }
+        }
+        @media only screen and (max-width: 800px) {
+            transform: translateX(-50%) translateY(1.4em) !important;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(3.05em) !important;
+            }
+        }
+        @media only screen and (max-width: 650px) {
+            transform: translateX(-50%) translateY(1.4em) !important;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(2.5em) !important;
+            }
+        }
+        @media only screen and (max-width: 450px) {
+            transform: translateX(-50%) translateY(1.4em) !important;
+            
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(3em) !important;
+            }
+        }
+        @media only screen and (max-width: 320px) {
+            transform: translateX(-50%) translateY(1.4em) !important;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(2.4em) !important;
+            }
+        }
+    }
+
+    &.h3Center {
+        left: 50%;
+        transform: translateX(-50%) translateY(calc(2.15em)) !important;
+        transform-origin: left;
+
+        @media only screen and (min-width: 500px) {
+            transform: translateX(-50%) translateY(2.46em) !important;
+        }
+        @media only screen and (min-width: 1200px) {
+            transform: translateX(-50%) translateY(2.1em) !important;
+        }
+        @media only screen and (min-width: 1400px) {
+            transform: translateX(-50%) translateY(1.73em) !important;
+        }
+        @media only screen and (min-width: 1600px) {
+            transform: translateX(-50%) translateY(1.42em) !important;
+        }
+    }
+}
+
+// small details
+h4 {
+    font-size: 14px;
+    font-weight: var(--font-light);
+    letter-spacing: 3px;
+
+    @media only screen and (max-width: 1000px) {
+        text-align: center !important;
+    }
+}
+
+p,
+span {
+    line-height: 1.4rem;
+    font-size: 18px;
+    font-weight: 300;
+
+    @media only screen and (max-width: 1000px) {
+        text-align: center;
+        max-width: 600px;
+    }
+}

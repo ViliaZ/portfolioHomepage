@@ -1,0 +1,25 @@
+<!-- (window:scroll)="navigation.scroll()"
+    (window:resize)="navigation.scroll()"  -->
+<div class="navWrapper"  [class.mobileOpen]="mobileMenuOpen" id="nav">
+
+    <a class="logo" (click)="navigation.forceNavigate('home')" routerLink="/">VZ.</a>
+
+    <div class="linksWrapper" [class.mobileOpen]="!!mobileMenuOpen">
+        <div class="links"  [class.mobileOpen]="!!mobileMenuOpen" [class.mobile]="isMobile700">
+            <a (click)="navigation.forceNavigate('aboutme'); toggleMenu('close')" routerLink="/#aboutme">ABOUT</a>
+            <a (click)="navigation.forceNavigate('portfolio'); toggleMenu('close')" routerLink="/#portfolio">PORTFOLIO</a>
+            <a (click)="navigation.forceNavigate('skills'); toggleMenu('close')" routerLink="/#skills">SKILLS</a>
+            <a *ngIf="isMobile700" (click)="navigation.forceNavigate('contact'); toggleMenu('close')" routerLink="/#contact">CONTACT</a>
+            <app-img-opentowork *ngIf="!isMobile700" (click)="navigation.forceNavigate('contact')" routerLink="/#contact"></app-img-opentowork>
+        </div>
+
+    <!-- hamburger icon -->
+    <div *ngIf="isMobile700" class="hamburgerMenu three col" (click)="toggleMenu()">
+        <div [class.is-active]="mobileMenuOpen" class="hamburger" id="hamburger-6">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,84 @@
+:host {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: var(--paddingTopBottom);
+    padding-left: var(--paddingMain);
+    padding-right: var(--paddingMain);
+
+    @media only screen and (max-width: 1000px) {
+        height: unset;
+        margin-top: var(--mobileMarginTop);
+        max-width: var(--maxwidthMobile);
+    }
+}
+
+.wrapperAll {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--maxwidth);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+    color: var(--primary-light);
+
+    @media only screen and (max-width: 1000px) {
+        justify-content: unset;
+        text-align: unset;
+    }
+
+    p {
+        max-width: 550px;
+
+        @media only screen and (max-width: 1000px) {
+            max-width: unset;
+        }
+    }
+}
+
+.headlines {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+
+    h3 {
+    //     position: absolute;
+    //     top: -96px;
+    //     transform: translateX(calc(var(--paddingMain) * (-1) - 0.1em)) translateY(calc(2em)) !important;
+    //     // transform: translateX(-50%) translateY(calc(1.2em + 10vw)) !important;
+    //     left: 50%;
+    //     z-index: 100;
+
+    //     @media only screen and (max-width: 1000px) {
+    //         right: unset;
+    //         left: 0;
+    //         transform-origin: left;
+    //         // transform: translateX(calc(var(--paddingMain) * (-1) - 0.1em)) translateY(calc(1.5em + 22vw)) !important;
+    //     }
+    }
+}
+
+.project-wrapper {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    // padding-bottom: var(--paddingTopBottom);
+}

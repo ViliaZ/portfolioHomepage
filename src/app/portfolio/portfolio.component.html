@@ -1,0 +1,18 @@
+<div class="wrapperAll">
+    <div #observed class="text">
+        <div class="headlines">
+            <h3 appParallax [ratio]="0.152" class="h3Center">Portfolio</h3>
+            <h2>portfolio</h2>
+        </div>
+        <p>
+            Scrolling this Angular-built website, you already got an idea of my work.
+            Click on the images below to explore further projects.
+        </p>
+    </div>
+
+    <div class="project-wrapper">
+        <app-project [projectIndex]="0"></app-project>
+        <app-project [projectIndex]="1"></app-project> 
+        <app-project [projectIndex]="2"></app-project>
+    </div>
+</div>

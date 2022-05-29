@@ -1,0 +1,234 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg);
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 56px var(--paddingHero) 12px var(--paddingHero);
+
+    // right bottom: yellow-black Gradient on mouse animation
+    &:after {
+        position: absolute;
+        right: -2px;
+        bottom: -60px;
+        content: "";
+        background: rgb(0,0,0);
+        background: linear-gradient(176deg, rgba(0,0,0,0) 0%,rgba(146, 146, 146, 0.562) 54%, rgba(0,0,0,0) 100%);
+        // background: linear-gradient(176deg, rgba(0,0,0,0) 0%, rgba(234, 207, 3, 0.722) 54%, rgba(0,0,0,0) 100%);
+
+
+        height: 180px;
+        width: 120px;
+        z-index: 0;
+        animation: changeHeight 2s infinite linear alternate-reverse;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    @keyframes changeHeight {
+        from {
+            height: 152px;
+        }
+        to {
+            height: 180px;
+        }
+    }
+}
+
+// ****** LEFT SIDE ICONS ******
+
+.sideLeft {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4em;
+
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        padding-bottom: 32px;
+    }
+}
+
+.email {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: left;
+    margin-left: 14px;
+    letter-spacing: 3px;
+    filter: opacity(0.5);
+
+    @media only screen and (max-width: 900px) {
+        display: none;
+    }
+}
+
+.icons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg);
+    gap: 1.2em;
+    filter: opacity(0.5);
+
+    @media only screen and (max-width: 700px) {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    img {
+        width: 30px;
+        filter: invert(1);
+        cursor: pointer;
+    }
+
+    // STROKE / line
+    &:before {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateY(100%);
+        transform-origin: top;
+        content: "";
+        height: 90px;
+        width: 1px;
+        background-color: white;
+        filter: opacity(0.8);
+
+        @media only screen and (max-width: 700px) {
+            display: none;
+        }
+    }
+}
+
+.text {
+    position: relative;
+    margin-left: 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    // yellow Front-end
+    &:after {
+        position: absolute;
+        content: "front-end";
+        font-family: "FeelingPassionate";
+        font-size: calc(3em + 2.2vw);
+        color: var(--accent);
+        transform: rotate(-5deg);
+        left: -1.2em;
+        top: -1em;
+        z-index: 100;
+
+        @media only screen and (max-width: 540px) {
+            font-size: 10vw;
+            left: -28px;
+            top: -1.1em;
+        }
+    }
+}
+
+h1 {
+    position: relative;
+
+    @media only screen and (max-width: 540px) {
+        font-size: 12vw;
+    }
+}
+
+.viliazeisig {
+    position: relative;
+    font-size: 20px;
+    margin-left: 8px;
+    font-weight: 300;
+    letter-spacing: 3px;
+
+    @media only screen and (max-width: 540px) {
+        font-size: 16px;
+    }
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        transform: translateX(16px) translateY(2px);
+        content: "";
+        width: 550px;
+        height: 2px;
+        background-color: var(--accent);
+    }
+}
+
+.headline {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-right {
+    width: 50%;
+    height: 100%;
+    padding-left: var(--padding-Middle);
+}
+
+// ****** SCROLL SVG Mouse ******
+#scrollSVG {
+    position: absolute;
+    // should be exactly in one line with the opentowork icon
+    right: 37px;
+    bottom: 80px;
+    width: 40px !important;
+    z-index: 111;
+    animation: moveUpDown 2s infinite linear alternate-reverse;
+    filter: invert(1);
+
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+
+    path {
+        fill: var(--primary-light);
+        filter: invert(1);
+    }
+}
+
+@keyframes moveUpDown {
+    from {
+        bottom: 60px;
+        opacity: 0.6;
+    }
+    to {
+        bottom: 90px;
+        opacity: 1;
+    }
+}
+
+// old version with line
+app-scroll-animation {
+    position: absolute;
+    bottom: 50px;
+}

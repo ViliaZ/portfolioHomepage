@@ -1,0 +1,93 @@
+<!-- position: absolute -->
+<div 
+  *ngIf="successfullySend" 
+  id="contact" 
+  class="thankyou">
+  <div>T</div>
+  <div>H</div>
+  <div>A</div>
+  <div>N</div>
+  <div>K</div>
+  <div>Y</div>
+  <div>O</div>
+  <div>U</div>
+  <div>!</div>
+</div>
+
+<div class="sectionLeft">
+  <div class="textwrapper">
+    <div class="headlines">
+      <h3 appParallax [ratio]="0.092" class="h3Left contact">Contact</h3>
+      <h2>Contact</h2>
+    </div>
+    
+    <p> Need a Software-Developer? Get in touch. </p>
+
+    <p>I am always open to talk about your business and projects and find out how I can help with it - bringing it alive
+      or
+      grow it. </p>
+    <div class="socialDetails">
+      <div class="detail email">
+        <img src="assets/img/email-outline.png" alt="Email">
+        <span>vzeisig@gmail.com</span>
+      </div>
+      
+      <div class="detail">
+        <a href="https://www.linkedin.com/in/vilia-zeisig-b14323107/" target="_blank">
+          <img  src="assets/img/linkedin-outline.png" alt="Email">
+          <span >Profile: Vilia Zeisig </span>  
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="sectionRight">
+
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <div class="formfield">
+      <input #input type="text" minlength="2" placeholder="First name" id="firstname" required
+        [(ngModel)]="contact.firstname" name="firstname" #firstname="ngModel">
+      <div class="validationText" [class.hide]="!(firstname.invalid && firstname.touched)">Minimum of 2 characters is
+        required.
+      </div>
+    </div>
+
+    <div class="formfield">
+      <input #input type="text" minlength="2" placeholder="Last name" id="lastname" required
+        [(ngModel)]="contact.lastname" name="lastname" #lastname="ngModel">
+      <div class="validationText" [class.hide]="!(lastname.invalid && lastname.touched)">Minimum of 2 characters is
+        required.
+      </div>
+    </div>
+
+    <div class="formfield">
+      <input #input type="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your E-Mail"
+        [(ngModel)]="contact.email" name="email" #email="ngModel">
+      <div class="validationText" [class.hide]="!(email.invalid && email.touched)">Please follow the email format of
+        name@example.de 
+      </div>
+    </div>
+
+    <div class="formfield">
+      <textarea #input rows="10" placeholder="Your message ..." required minlength="10" [(ngModel)]="contact.message"
+        name="message" #message="ngModel">
+      </textarea>
+      <div class="validationText" [class.hide]="!(message.invalid && message.touched)">Seems like your message is too
+        short ...
+      </div>
+    </div>
+
+    <div>
+      <button [class.shakeAnimation]="!contactForm.valid" type="submit" [disabled]="!contactForm.form.valid">
+        <img src="assets/img/send.png" alt="send"> SEND IT.
+      </button>
+    </div>
+
+  </form>
+
+</div>

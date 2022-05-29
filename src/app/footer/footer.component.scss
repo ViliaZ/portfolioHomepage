@@ -1,0 +1,38 @@
+:host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 100vw;
+    max-width: 100%;
+    gap: 20px;
+    background-color: var(--accent);
+    padding: 20px var(--paddingMain);
+
+    @media only screen and (max-width: 650px) {
+        flex-direction: column;
+    }
+
+    div {
+        font-size: 16px !important;
+        color: var(--bg);
+    }
+}
+
+a {
+    text-decoration: none;
+    transition: all 150ms ease-in-out;
+    font-size: 16px;
+    color: var(--bg)!important;
+
+    &:hover {
+        color: var(--hover);
+    }
+}
+
+img {
+    margin: 8px 4px 0px 4px;
+    width: 12px;
+    filter: invert(0.9);
+}

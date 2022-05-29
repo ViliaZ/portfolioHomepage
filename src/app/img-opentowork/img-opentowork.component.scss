@@ -1,0 +1,41 @@
+:host{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 90px;
+    // height: 90px;
+
+    #textCircle{
+        height: 100%;
+        width: 100%; 
+        animation: rotate 33s infinite linear;
+    
+        path{
+            fill: var(--primary-light)!important; 
+        }
+    }
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#iconContact {
+    position: absolute!important;
+    left: 48%!important; 
+    transform: translateX(-50%) translateY(-50%);
+    top: 52%;
+    height: 34px!important;
+    width: 34px!important; 
+
+    path{
+        fill: var(--accent)!important; 
+    }
+}
+

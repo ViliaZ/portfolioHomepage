@@ -1,0 +1,48 @@
+<div class="wrapperProject">
+
+    <div class="leftSection bgImage, bgImage{{projectIndex}}">
+        <div class="imageWrapper">
+            <img class="mainImage" src="{{projectsService.projects[projectIndex].image}}" alt="projectImage">
+            <img class="overlay" *ngIf="projectIndex == 2" src="assets/img/projects/fish.gif">
+            <!-- //Join -->
+            <img *ngIf="projectIndex == 0" appParallax [ratio]="0.03" class="overlay join"
+                src="assets/img/projects/join-elements.svg">
+
+            <!-- //TokenX -->
+            <img *ngIf="projectIndex == 1" appParallax [ratio]="-0.03" class="overlay tokenx"
+                src="assets/img/projects/token-bg.png">
+            <!-- //Sharky -->
+            <img *ngIf="projectIndex == 2" appParallax [ratio]="-0.03" class="overlay sharky"
+                src="assets/img/projects/light.png">
+
+        </div>
+    </div>
+
+    <div class="rightSection">
+        <div class="projectDescription">
+            <div class="number">
+                <span>{{ projectsService.projects[projectIndex].count }}</span>
+                <div class="line"></div>
+            </div>
+
+            <div class="infos">
+                <h4>{{ projectsService.projects[projectIndex].subtitle }}</h4>
+                <h2>{{ projectsService.projects[projectIndex].title }}</h2>
+                <p>{{ projectsService.projects[projectIndex].description }}</p>
+
+                <div class="projectTools">
+                    <span *ngFor="let tool of projectsService.projects[projectIndex].tech; index as i">{{ tool }}</span>
+                </div>
+
+                <div class="techInfos">
+                    <button routerLink="{{ projectsService.projects[projectIndex].url}}">
+                        Live Test
+                    </button>
+
+                    <!-- <img src="assets/img/git.svg" class="github" routerLink="{{ projectsService.projects[projectIndex].github}}">  -->
+                    <span>To Github</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
