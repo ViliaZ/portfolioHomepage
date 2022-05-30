@@ -16,7 +16,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { KeyboardComponent } from './keyboard/keyboard.component';
 import { ScrollAnimationComponent } from './scroll-animation/scroll-animation.component';
 import { ImgOpentoworkComponent } from './img-opentowork/img-opentowork.component';
-import { About2Component } from './about2/about2.component';
 import { ProjectComponent } from './project/project.component';
 import { ParallaxDirective } from './parallax.directive';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -36,7 +35,6 @@ import { LayoutModule } from '@angular/cdk/layout';
     KeyboardComponent,
     ScrollAnimationComponent,
     ImgOpentoworkComponent,
-    About2Component,
     ProjectComponent,
     ParallaxDirective,
   ],

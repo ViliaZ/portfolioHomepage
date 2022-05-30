@@ -42,7 +42,6 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void { }
 
   onSubmit(ngForm: any) {
-
     // this.submitted = true;
     if (ngForm.submitted && ngForm.form.valid) {
       this.http
@@ -56,10 +55,11 @@ export class ContactComponent implements OnInit {
         });
         setTimeout(() => {
           this.successfullySend = true;
+          window.scrollTo(0, document.body.scrollHeight);
         }, 50);
     }
     setTimeout(() => { this.resetAllInputs(), 200 });
-    setTimeout(() => { this.successfullySend = false}, 3500 );
+    setTimeout(() => { this.successfullySend = false}, 4500 );
   }
 
 

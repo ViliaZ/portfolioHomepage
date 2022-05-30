@@ -8,7 +8,7 @@
     overflow: hidden;
 }
 
-a{
+a {
     text-decoration: none;
     display: flex;
 }
@@ -28,11 +28,9 @@ a{
         right: -2px;
         bottom: -60px;
         content: "";
-        background: rgb(0,0,0);
-        background: linear-gradient(176deg, rgba(0,0,0,0) 0%,rgba(146, 146, 146, 0.562) 54%, rgba(0,0,0,0) 100%);
+        background: rgb(0, 0, 0);
+        background: linear-gradient(176deg, rgba(0, 0, 0, 0) 0%, rgba(146, 146, 146, 0.562) 54%, rgba(0, 0, 0, 0) 100%);
         // background: linear-gradient(176deg, rgba(0,0,0,0) 0%, rgba(234, 207, 3, 0.722) 54%, rgba(0,0,0,0) 100%);
-
-
         height: 180px;
         width: 120px;
         z-index: 0;
@@ -107,7 +105,7 @@ a{
         cursor: pointer;
     }
 
-    // STROKE / line
+    // fine vertical STROKE / line
     &:before {
         position: absolute;
         bottom: -10px;
@@ -128,27 +126,26 @@ a{
 
 .text {
     position: relative;
-    margin-left: 8vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    // yellow Front-end
+    // FRONT END
     &:after {
         position: absolute;
-        content: "front-end";
-        font-family: "FeelingPassionate";
-        font-size: calc(3em + 2.2vw);
-        color: var(--accent);
-        transform: rotate(-5deg);
-        left: -1.2em;
-        top: -1em;
-        z-index: 100;
+        content: "FRONTEND";
+        font-family: "Open Sans", sans-serif;
+        font-size: calc(7em + 2.2vw);
+        font-weight: 800;
+        opacity: 0.1;
+        top: 0;
+        transform: translateY(-0.45em);
+        z-index: 0;
 
-        @media only screen and (max-width: 540px) {
-            font-size: 10vw;
-            left: -28px;
+        @media only screen and (max-width: 760px) {
+            transform: translateY(0.7em);
+            font-size: 16vw;
             top: -1.1em;
         }
     }
@@ -157,36 +154,47 @@ a{
 h1 {
     position: relative;
 
-    @media only screen and (max-width: 540px) {
+    @media only screen and (max-width: 700px) {
         font-size: 12vw;
     }
 }
 
 .viliazeisig {
     position: relative;
-    font-size: 20px;
-    margin-left: 8px;
-    font-weight: 300;
+    text-align: right;
+    transform: translateY(-1.4em) translateX(0.2em);
     letter-spacing: 3px;
-
-    @media only screen and (max-width: 540px) {
-        font-size: 16px;
-    }
+    font-family: "Open Sans", sans-serif;
+    font-size: calc(11px + 0.3vw);
+    color: var(--primary-light);
 
     &:after {
         position: absolute;
+        left: -16px;
         top: 50%;
         transform: translateX(16px) translateY(2px);
         content: "";
-        width: 550px;
-        height: 2px;
+        width: 275px;
+        height: 0.02em;
         background-color: var(--accent);
     }
 }
 
 .headline {
     position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.subline {
+    transform: translateY(-0.5em);
+    max-width: 350px;
+    text-align: left!important;
+
+    @media only screen and (max-width: 400px) {
+        font-size: 12px;
+        max-width: 260px;
+    }
 }
 
 .section-right {
