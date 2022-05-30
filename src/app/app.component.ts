@@ -9,8 +9,8 @@ import { Router } from 'node_modules/@angular/router';
 export class AppComponent {
   title = 'portfolio-website';
 
-constructor(public router: Router){
 
+constructor(public router: Router){
 }
 
 }

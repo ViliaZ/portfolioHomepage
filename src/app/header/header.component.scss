@@ -22,7 +22,12 @@ a {
     height: 100%;
     margin: 56px var(--paddingHero) 12px var(--paddingHero);
 
-    // right bottom: yellow-black Gradient on mouse animation
+    &.isScrolling:after{
+        opacity: 0;
+        bottom: -20px;
+    }
+
+    // right bottom: Gradient on mouse animation
     &:after {
         position: absolute;
         right: -2px;
@@ -34,6 +39,8 @@ a {
         height: 180px;
         width: 120px;
         z-index: 0;
+        opacity: 1;
+        transition: all 350ms ease-in-out;
         animation: changeHeight 2s infinite linear alternate-reverse;
 
         @media only screen and (max-width: 600px) {
@@ -222,7 +229,6 @@ h1 {
             max-width: 360px;
         }
 
-
         @media only screen and (max-width: 400px) {
             max-width: 270px;
         }
@@ -243,10 +249,15 @@ h1 {
     width: 40px !important;
     z-index: 111;
     animation: moveUpDown 2s infinite linear alternate-reverse;
-    filter: invert(1);
+    filter: invert(1) opacity(1) blur(0);
+    transition:  650ms ease-in-out;
 
     @media only screen and (max-width: 600px) {
         display: none;
+    }
+
+    &.isScrolling{
+        filter: invert(1) opacity(0) blur(4px);
     }
 
     path {

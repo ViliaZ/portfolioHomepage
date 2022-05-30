@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavigationService } from '../Services/navigation.service';
 
@@ -9,7 +9,12 @@ import { NavigationService } from '../Services/navigation.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public navigation: NavigationService) { }
+  @Input() isScrolling: boolean = false;
+  constructor(public navigation: NavigationService) { 
+    window.addEventListener("scroll", (event) => {
+       (window.scrollY > 14) ? this.isScrolling = true : this.isScrolling = false;
+  });
+  }
 
   ngOnInit(): void {
   }
