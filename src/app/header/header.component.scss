@@ -136,7 +136,7 @@ a {
         position: absolute;
         content: "FRONTEND";
         font-family: "Open Sans", sans-serif;
-        font-size: calc(7em + 2.5vw);
+        font-size: calc(1em + 10vw);
         font-weight: 800;
         opacity: 0.2;
         top: 0;
@@ -145,17 +145,19 @@ a {
 
         @media only screen and (max-width: 760px) {
             transform: translateY(0.7em);
-            font-size: 16vw;
             top: -1.1em;
+            font-size: calc(1.5em + 8vw);
         }
     }
 }
 
 h1 {
     position: relative;
+    z-index: 2;
+    font-size: calc(44px + 4.5vw);
 
-    @media only screen and (max-width: 700px) {
-        font-size: 12vw;
+    @media only screen and (max-width: 760px) {
+        font-size: calc(33px + 6.5vw);
     }
 }
 
@@ -165,18 +167,34 @@ h1 {
     transform: translateY(-1.4em) translateX(0.2em);
     letter-spacing: 3px;
     font-family: "Open Sans", sans-serif;
-    font-size: calc(11px + 0.3vw);
+    font-size: calc(13px + 0.3vw);
     color: var(--primary-light);
 
+
+    // mobile: left text and right side line
+    @media only screen and (max-width: 900px) {
+        text-align: left;
+        padding-top: 1.1em;
+        margin-top: 0.2em;
+    }
+
+    // horizontal yellow line 
     &:after {
         position: absolute;
         left: -16px;
         top: 50%;
         transform: translateX(16px) translateY(2px);
         content: "";
-        width: 275px;
-        height: 0.02em;
+        width: 60%;
+        height: 0.07em;
         background-color: var(--accent);
+
+    @media only screen and (max-width: 900px) {
+        top: 8px;
+    }
+
+    @media only screen and (max-width: 660px) {
+        width: 56%;    }
     }
 }
 
@@ -188,12 +206,26 @@ h1 {
 
 .subline {
     transform: translateY(-0.5em);
-    max-width: 350px;
     text-align: left!important;
+    font-size: calc(12px + 0.3vw);
+    font-weight: 400;
 
-    @media only screen and (max-width: 400px) {
-        font-size: 12px;
-        max-width: 260px;
+    @media only screen and (max-width: 900px) {
+        display: none;
+    }
+
+    &.mobile{
+        display: none;
+
+        @media only screen and (max-width: 900px) {
+            display: flex;
+            max-width: 360px;
+        }
+
+
+        @media only screen and (max-width: 400px) {
+            max-width: 270px;
+        }
     }
 }
 
@@ -206,7 +238,6 @@ h1 {
 // ****** SCROLL SVG Mouse ******
 #scrollSVG {
     position: absolute;
-    // should be exactly in one line with the opentowork icon
     right: 37px;
     bottom: 80px;
     width: 40px !important;
