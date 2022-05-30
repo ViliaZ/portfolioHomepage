@@ -15,7 +15,7 @@ export class ProjectsService {
       githubURL: 'https://github.com/ViliaZ/join-kanbanBoard',
       count: '01',
       description: 'JOIN is a WebApp, inspired by the popular Kanban System for project and personal management. Implements drag and drop lists, creation of user boards and user dashboard. This project utilizes Firebase as backlog.',
-      image: 'assets/img/projects/join-basic.png',
+      image: 'assets/img/projects/Join-layer1.png',
       tech: ['Angular / Typescript', 'HTML & CSS','Firebase' ]
     },
     {
