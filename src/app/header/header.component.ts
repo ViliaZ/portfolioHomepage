@@ -10,10 +10,11 @@ import { NavigationService } from '../Services/navigation.service';
 export class HeaderComponent implements OnInit {
 
   @Input() isScrolling: boolean = false;
-  constructor(public navigation: NavigationService) { 
+
+  constructor(public navigation: NavigationService) {
     window.addEventListener("scroll", (event) => {
-       (window.scrollY > 14) ? this.isScrolling = true : this.isScrolling = false;
-  });
+      (window.scrollY > 14) ? this.isScrolling = true : this.isScrolling = false;
+    });
   }
 
   ngOnInit(): void {

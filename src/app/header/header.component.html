@@ -2,10 +2,10 @@
     <div class="text">
         <!-- <h2>front-end</h2> -->
         <div class="headline">
-            <h1>developer.</h1>
-            <span class="viliazeisig">VILIA ZEISIG</span>
-            <p class="subline ">I am a curiousity-driven Web Developer. <br> Connecting the dots between ideas,<br> code & final product.
-            <p class="subline mobile ">I am a curiousity-driven Web Developer. <br>Connecting the dots between ideas, code & final product.
+            <h1 appParallax [ratio]="0.14">developer.</h1>
+            <span class="viliazeisig" appParallax [ratio]="-0.1">VILIA ZEISIG</span>
+            <p class="subline" appParallax [ratio]="-0.2">I am a curiousity-driven Web Developer. <br> Connecting the dots between ideas,<br> code & final product.
+            <p class="subline mobile" appParallax [ratio]="-0.2">I am a curiousity-driven Web Developer. Connecting the dots between ideas, code & final product.
             </p>
         </div>
     </div>
@@ -14,7 +14,7 @@
 
     <div class="email"> vzeisig@gmail.com </div>
     <div class="sideLeft">
-        <div class="icons">
+        <div class="icons" [class.isScrolling]="isScrolling">
             <a (click)="navigation.forceNavigate('contact')" routerLink="/#contact">
                 <img src="assets/img/email.svg" alt="email">
             </a>
