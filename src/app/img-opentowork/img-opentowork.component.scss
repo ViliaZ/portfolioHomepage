@@ -1,41 +1,52 @@
-:host{
+:host {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    // width: 90px;
-    // height: 90px;
 
-    #textCircle{
+    &:hover #envTop{
+        transform: unset;
+        transform-origin:unset;  
+
+    }
+
+    #textCircle {
         height: 100%;
-        width: 100%; 
+        width: 100%;
         animation: rotate 33s infinite linear;
-    
-        path{
-            fill: var(--primary-light)!important; 
+
+        path {
+            fill: var(--primary-light) !important;
         }
     }
 }
 
 @keyframes rotate {
-    from{
+    from {
         transform: rotate(0deg);
     }
-    to{
+    to {
         transform: rotate(360deg);
     }
 }
 
 #iconContact {
-    position: absolute!important;
-    left: 48%!important; 
-    transform: translateX(-50%) translateY(-50%);
+    position: absolute !important;
+    left: 48% !important;
+    transform: translateX(-50%) translateY(-52%);
     top: 52%;
-    height: 34px!important;
-    width: 34px!important; 
-
-    path{
-        fill: var(--accent)!important; 
-    }
+    height: 48px !important;
+    width: 48px !important;
+    z-index: 1000;
 }
 
+#envTop {
+    transform: rotateX(85deg);
+    transform-origin: 0% 21%;
+    transition: 250ms all ease-in-out;
+}
+
+#envTopBackground{
+    transform: rotateX(180deg);
+    transform-origin: 0% 21%;
+}
