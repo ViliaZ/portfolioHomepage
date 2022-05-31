@@ -6,8 +6,12 @@
 
     &:hover #envTop{
         transform: unset;
-        transform-origin:unset;  
+        transform-origin: unset;  
+    }
 
+    &:hover #letter{
+transform: scaleY(1);
+transition-delay: 200ms;
     }
 
     #textCircle {
@@ -30,6 +34,12 @@
     }
 }
 
+#letter{
+    transform: scaleY(0);
+transform-origin: center;
+transition: 350ms all ease-in-out;
+}
+
 #iconContact {
     position: absolute !important;
     left: 48% !important;
@@ -42,7 +52,7 @@
 
 #envTop {
     transform: rotateX(85deg);
-    transform-origin: 0% 21%;
+    transform-origin: 0% 22%;
     transition: 250ms all ease-in-out;
 }
 
