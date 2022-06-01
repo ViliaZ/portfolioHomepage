@@ -76,22 +76,6 @@ a {
     }
 }
 
-// .email {
-//     position: absolute;
-//     top: 48%;
-//     left: 0;
-//     transform: rotate(-90deg) translateX(-50%);
-//     transform-origin: left;
-//     margin-left: 14px;
-//     font-weight: 200;
-//     letter-spacing: 3px;
-//     filter: opacity(0.5);
-
-//     @media only screen and (max-width: 1200px) {
-//         display: none;
-//     }
-// }
-
 .icons {
     position: relative;
     display: flex;
@@ -155,6 +139,7 @@ a {
 
 .text {
     position: relative;
+    transform: translateY(1em);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,7 +149,7 @@ a {
 h1 {
     position: relative;
     transform: translateX(-0.07em);
-    z-index: 2;
+    z-index: 5;
     font-size: calc(44px + 4.5vw);
 
     @media only screen and (max-width: 760px) {
@@ -176,15 +161,19 @@ h1 {
         position: absolute;
         content: "FRONTEND";
         font-family: "Open Sans", sans-serif;
-        font-size: calc(1em + 5vw);
+        font-size: calc(1em + 3vw);
         font-weight: 800;
+        letter-spacing: -8px;
         opacity: 0.2;
         top: -0.1em;
         left: 50%;
         transform: translateY(-0.45em) translateX(-50%);
-        z-index: 0;
+        background: -webkit-linear-gradient(rgb(253, 253, 253), rgb(0, 0, 0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: -1;
 
-        @media only screen and (max-width: 550px) {
+      @media only screen and (max-width: 550px) {
             font-size: 19vw;
         }
     }

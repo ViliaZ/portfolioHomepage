@@ -36,7 +36,7 @@
 .logo {
   position: absolute;
   left: 0;
-  top: 90px;
+  top: 70px;
   transform: translateY(-50%);
   font-size: 16px;
   font-weight: bolder;
@@ -92,10 +92,10 @@ a {
   color: var(--primary-light);
   transition: all 150ms ease-in-out;
   cursor: pointer;
+  border-bottom: 3px solid transparent;
 
-  &:hover {
+  &:hover{
     color: var(--accent);
-
   }
 }
 

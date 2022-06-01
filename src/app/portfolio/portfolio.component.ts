@@ -19,8 +19,8 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.observedElements)
     this.intersectionObserver.createIntersectionObserver(this.observedElements);
+    
   }
 
 

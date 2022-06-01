@@ -27,11 +27,11 @@ export class NavComponent implements OnInit {
     this.observeBreakpoints();
   }
 
-  toggleMenu(closingRequest?: string): void {
-    if(closingRequest == 'close' && !!this.mobileMenuOpen){
+  toggleMenu(request?: string): void {
+    if(request == 'close' && this.mobileMenuOpen) {
       this.mobileMenuOpen = false;
     } else{
-      this.mobileMenuOpen ? this.mobileMenuOpen = false : this.mobileMenuOpen = true;
+      this.mobileMenuOpen == false ? this.mobileMenuOpen = false : this.mobileMenuOpen = true;
     }
   }
 

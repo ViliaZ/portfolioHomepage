@@ -17,10 +17,8 @@ export class IntersectionObserverService   {
 
   constructor() { }
 
-
   createIntersectionObserver(observedElements: any) {
     console.log('array in service',observedElements.nativeElement);
-
     let options = {
       root: null,
       rootMargin: '0px',
