@@ -1,17 +1,14 @@
 <!-- position: absolute -->
-<div 
-  *ngIf="successfullySend" 
-  id="contact" 
-  class="thankyou">
-  <div>T</div>
-  <div>h</div>
-  <div>a</div>
-  <div>n</div>
-  <div>k</div>
-  <div>Y</div>
-  <div>o</div>
-  <div>u</div>
-  <div>!</div>
+<div [class.show]="!!successfullySend" id="contact" class="thankyou">
+  <span>T</span>
+  <span>h</span>
+  <span>a</span>
+  <span>n</span>
+  <span>k</span>
+  <span>Y</span>
+  <span>o</span>
+  <span>u</span>
+  <span>!</span>
 </div>
 
 <div class="sectionLeft">
@@ -20,8 +17,8 @@
       <h3 appParallax [ratio]="0.092" class="h3Left contact">CONTACT</h3>
       <h2>contact.</h2>
     </div>
-    
- 
+
+
 
     <p>I am looking forward to hear from you and discuss, how I can contribute to your business and projects. </p>
     <p> Need a Software-Developer? Get in touch.</p>
@@ -30,11 +27,11 @@
         <img src="assets/img/email-outline.png" alt="Email">
         <span>vzeisig@gmail.com</span>
       </div>
-      
+
       <div class="detail">
         <a href="https://www.linkedin.com/in/vilia-zeisig-b14323107/" target="_blank">
-          <img  src="assets/img/linkedin-outline.png" alt="Email">
-          <span >Profile: Vilia Zeisig </span>  
+          <img src="assets/img/linkedin-outline.png" alt="Email">
+          <span>Profile: Vilia Zeisig </span>
         </a>
       </div>
 
@@ -46,7 +43,6 @@
 
 
 <div class="sectionRight">
-
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="formfield">
       <input #input type="text" minlength="2" placeholder="First name" id="firstname" required
@@ -68,7 +64,7 @@
       <input #input type="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your E-Mail"
         [(ngModel)]="contact.email" name="email" #email="ngModel">
       <div class="validationText" [class.hide]="!(email.invalid && email.touched)">Please follow the email format of
-        name@example.de 
+        name@example.de
       </div>
     </div>
 
@@ -86,7 +82,6 @@
         <img src="assets/img/send.png" alt="send"> SEND IT.
       </button>
     </div>
-
   </form>
 
 </div>

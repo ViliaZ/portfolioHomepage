@@ -31,9 +31,8 @@ export class ContactComponent implements OnInit {
     },
   };
 
-
   invalid = false;
-  successfullySend = false;  // triggers successmessage to user
+  successfullySend = false; 
   submitted = false;
 
   constructor(private http: HttpClient) {
@@ -59,7 +58,7 @@ export class ContactComponent implements OnInit {
         }, 50);
     }
     setTimeout(() => { this.resetAllInputs(), 200 });
-    setTimeout(() => { this.successfullySend = false}, 4500 );
+    setTimeout(() => { this.successfullySend = false}, 3500 );
   }
 
 
