@@ -114,6 +114,7 @@ a {
         background-color: white;
         filter: opacity(0.8);
         transition: all 750ms ease-in-out;
+        animation: show-up 550ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
         @media only screen and (max-width: 700px) {
             display: none;
@@ -122,7 +123,7 @@ a {
 
     &:after {
         position: absolute;
-        content: 'vzeisig@gmail.com';
+        content: "vzeisig@gmail.com";
         top: -40px;
         left: 4px;
         transform: rotate(-90deg);
@@ -130,6 +131,8 @@ a {
         font-weight: 200;
         letter-spacing: 3px;
         filter: opacity(0.7);
+        animation: show-up 350ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation-delay: 1300ms;
 
         @media only screen and (max-width: 1200px) {
             display: none;
@@ -148,7 +151,7 @@ a {
 
 h1 {
     position: relative;
-    transform: translateX(-0.07em);
+    transform: translateX(-0.07em) translateY(0.2em);
     z-index: 5;
     font-size: calc(44px + 4.5vw);
 
@@ -164,7 +167,7 @@ h1 {
         font-size: calc(1em + 3vw);
         font-weight: 800;
         letter-spacing: -8px;
-        opacity: 0.2;
+        opacity: 0.3;
         top: -0.1em;
         left: 50%;
         transform: translateY(-0.45em) translateX(-50%);
@@ -172,9 +175,15 @@ h1 {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         z-index: -1;
+        animation: showUp 2550ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation-delay: 520ms;
 
-      @media only screen and (max-width: 550px) {
+        @media only screen and (max-width: 400px) {
+            font-size: 17vw;
+        }
+        @media only screen and (max-width: 550px) {
             font-size: 19vw;
+            letter-spacing: -4px;
         }
     }
 }
@@ -210,7 +219,6 @@ h1 {
         @media only screen and (max-width: 900px) {
             top: 8px;
         }
-
         @media only screen and (max-width: 660px) {
             width: 56%;
         }
@@ -221,13 +229,14 @@ h1 {
     position: relative;
     display: flex;
     flex-direction: column;
+    transform: translateY(-44px);
 }
 
 .subline {
-    transform: translateY(-0.5em);
     text-align: left !important;
     font-size: calc(12px + 0.3vw);
     font-weight: 400;
+    margin-top: 0.5em;
 
     @media only screen and (max-width: 900px) {
         display: none;
@@ -240,12 +249,10 @@ h1 {
             display: flex;
             max-width: 350px;
         }
-
         @media only screen and (max-width: 580px) {
             display: flex;
             max-width: 300px;
         }
-
         @media only screen and (max-width: 330px) {
             max-width: 270px;
         }
@@ -298,4 +305,38 @@ h1 {
 app-scroll-animation {
     position: absolute;
     bottom: 50px;
+}
+
+.slideInBottom{
+    animation: slide-in-bottom 630ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(800px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes show-up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

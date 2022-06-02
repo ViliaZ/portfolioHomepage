@@ -5,11 +5,10 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    height: 90vh;
+    padding-top: calc(var(--paddingMain) + 4em);
+    padding-bottom: calc(var(--paddingMain) + 3em);
 
     @media only screen and (max-width: 1000px) {
-        height: unset;
-        margin-top: var(--mobileMarginTop);
         padding-left: var(--paddingMain);
         padding-right: var(--paddingMain);
           }
@@ -26,7 +25,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: unset;
-        gap: 2em;
         height: unset;
           }
 }
@@ -103,7 +101,7 @@
         width: 100%;
         padding-left:  var(--paddingMain);
         padding-right:  var(--paddingMain);
-        padding-bottom: var(--paddingTopBottom);
+        padding-bottom: 0px;
           }
 
 

@@ -3,9 +3,9 @@
         <!-- <h2>front-end</h2> -->
         <div class="headline">
             <h1 appParallax [ratio]="0.14">developer.</h1>
-            <span class="viliazeisig" appParallax [ratio]="-0.1">VILIA ZEISIG</span>
-            <p class="subline" appParallax [ratio]="-0.2">I am a curiousity-driven Web Developer. <br> Connecting the dots between ideas,<br> code & final product.
-            <p class="subline mobile" appParallax [ratio]="-0.2">I am a curiousity-driven Web Developer. Connecting the dots between ideas, code & final product.
+            <span class="viliazeisig slideInBottom" appParallax [ratio]="-0.1" style="animation-delay: 600ms">VILIA ZEISIG</span>
+            <p class="subline slideInBottom" appParallax [ratio]="-0.2" style="animation-delay: 400ms">I am a curiousity-driven Web Developer. <br> Connecting the dots between ideas,<br> code & final product.
+            <p class="subline mobile slideInBottom" appParallax [ratio]="-0.2" style="animation-delay: 200ms">I am a curiousity-driven Web Developer. Connecting the dots between ideas, code & final product.
             </p>
         </div>
     </div>
@@ -14,22 +14,21 @@
 
     <div class="sideLeft">
         <div class="icons" [class.isScrolling]="isScrolling">
-            <a (click)="navigation.forceNavigate('contact')" routerLink="/#contact">
+            <a (click)="navigation.forceNavigate('contact')" routerLink="/#contact" class="slideInBottom" style="animation-delay: 1000ms">
                 <img src="assets/img/email.svg" alt="email">
             </a>
-            <a href="https://github.com/ViliaZ" target="_blank">
+            <a href="https://github.com/ViliaZ" target="_blank" class="slideInBottom" style="animation-delay: 800ms">
                 <img src="assets/img/github.svg" alt="github">
             </a>
-            <a href="https://www.linkedin.com/in/vilia-zeisig-b14323107/" target="_blank">
+            <a href="https://www.linkedin.com/in/vilia-zeisig-b14323107/" target="_blank" class="slideInBottom" style="animation-delay: 600ms">
                 <img src="assets/img/linkedin.svg" alt="linkedin">
             </a>
-           
         </div>
     </div>
 
 
     <!-- // SCROLL ANIMATION WITH MOUSE -->
-<svg [class.isScrolling]="isScrolling" id="scrollSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
+<svg  [class.isScrolling]="isScrolling" id="scrollSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
 viewBox="0 0 224.87999 225" preserveAspectRatio="xMidYMid meet" version="1.0">
 <defs>
     <clipPath id="id1">

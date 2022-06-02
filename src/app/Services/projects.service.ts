@@ -9,7 +9,7 @@ export class ProjectsService {
 
   projects: any = [
     {
-      title: 'Kanban Board',
+      title: 'kanban board',
       subtitle: 'Project Managment',
       url: 'https://vilia-zeisig.com/kanban',
       githubURL: 'https://github.com/ViliaZ/join-kanbanBoard',
@@ -19,7 +19,7 @@ export class ProjectsService {
       tech: ['Angular / Typescript', 'HTML & CSS','Firebase' ]
     },
     {
-      title: 'Crypto Converter',
+      title: 'crypto converter',
       subtitle: 'API based Crypto Web-App',
       url: 'https://vilia-zeisig.com/kanban',
       githubURL: 'https://github.com/ViliaZ/tokenx',
@@ -29,7 +29,7 @@ export class ProjectsService {
       tech: ['Angular / Typescript', 'RestAPI', 'HTML & CSS' ]
     },
     {
-      title: 'Jump and Run Game',
+      title: 'jump and run game',
       subtitle: 'Object Oriented Javascript',
       url: 'https://github.com/ViliaZ/game-sharky',
       githubURL: 'https://github.com/ViliaZ/sharkygame',
