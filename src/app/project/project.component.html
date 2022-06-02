@@ -1,7 +1,7 @@
 <div class="wrapperProject">
 
     <div class="leftSection bgImage, bgImage{{projectIndex}}">
-        <div class="imageWrapper">
+        <div class="imageWrapper" routerLink="{{ projectsService.projects[projectIndex].url}}">
             <img class="mainImage" src="{{projectsService.projects[projectIndex].image}}" alt="projectImage">
             <img class="overlay" *ngIf="projectIndex == 2" src="assets/img/projects/fish.gif">
             <!-- //Join -->
