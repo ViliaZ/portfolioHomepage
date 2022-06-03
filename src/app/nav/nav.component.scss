@@ -2,6 +2,8 @@
   position: fixed;
   width: 100%;
   display: flex;
+  justify-content: center;
+  padding: auto;
   background-color: rgba(0, 0, 0, 0.761);
   background: rgba(2, 2, 2, 0.25);
   backdrop-filter: blur(4px);
@@ -13,6 +15,7 @@
   position: relative;
   height: 144px;
   width: 100%;
+  max-width: 1600px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
