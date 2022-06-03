@@ -2,18 +2,29 @@
 
     <div class="leftSection bgImage, bgImage{{projectIndex}}">
         <div class="imageWrapper" routerLink="{{ projectsService.projects[projectIndex].url}}">
-            <img class="mainImage" src="{{projectsService.projects[projectIndex].image}}" alt="projectImage">
-            <img class="overlay" *ngIf="projectIndex == 2" src="assets/img/projects/fish.gif">
+            <a href="{{ projectsService.projects[projectIndex].url}}" target="_blank">
+                <img class="mainImage" src="{{projectsService.projects[projectIndex].image}}" alt="projectImage">
+            </a>
+            <a href="{{ projectsService.projects[projectIndex].url}}" target="_blank">
+                <img class="overlay" *ngIf="projectIndex == 2" src="assets/img/projects/fish.gif">
+            </a>
             <!-- //Join -->
+            <a href="{{ projectsService.projects[projectIndex].url}}" target="_blank">
             <img *ngIf="projectIndex == 0" appParallax [ratio]="0.035" class="overlay join"
-                src="assets/img/projects/Join-layer2.png">
+                src="assets/img/projects/Join-layer2.png">       
+            </a>
 
             <!-- //TokenX -->
+            <a href="{{ projectsService.projects[projectIndex].url}}" target="_blank">
             <img *ngIf="projectIndex == 1" appParallax [ratio]="-0.03" class="overlay tokenx"
                 src="assets/img/projects/token-bg.png">
+            </a>
             <!-- //Sharky -->
+            <a href="{{ projectsService.projects[projectIndex].url}}" target="_blank">
+
             <img *ngIf="projectIndex == 2" appParallax [ratio]="-0.03" class="overlay sharky"
                 src="assets/img/projects/light.png">
+            </a>
 
         </div>
     </div>
@@ -35,12 +46,13 @@
                 </div>
 
                 <div class="techInfos">
-                    <button routerLink="{{ projectsService.projects[projectIndex].url}}">
+                    <a class="projectLink" target="_blank" href="{{ projectsService.projects[projectIndex].url}}">
                         Live Test
-                    </button>
+                    </a>
 
                     <!-- <img src="assets/img/git.svg" class="github" routerLink="{{ projectsService.projects[projectIndex].github}}">  -->
-                    <span>To Github</span>
+                    <a class="githubLink" target="_blank"
+                        href="{{ projectsService.projects[projectIndex].githubURL}}">To Github</a>
                 </div>
             </div>
         </div>

@@ -1,6 +1,5 @@
 :host{
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -8,11 +7,20 @@
     padding-bottom: 40px;
     padding-left: var(--paddingMain);
     padding-right:  var(--paddingMain);
-    padding-top: var(--paddingTopBottom);
+    padding-top: 188px;
     padding-bottom: var(--paddingTopBottom);
+    background-color: var(--bg);
 }
+
 
 h2{
     margin-top: 24px;
     margin-bottom: 12px;
+    white-space: unset;
+
+
+    &.smaller{
+        font-size: 32px;
+    }
 }
+

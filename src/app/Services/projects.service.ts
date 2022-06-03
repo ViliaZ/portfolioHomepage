@@ -11,7 +11,7 @@ export class ProjectsService {
     {
       title: 'kanban board',
       subtitle: 'Project Managment',
-      url: 'https://vilia-zeisig.com/kanban',
+      url: 'https://vilia-zeisig.com/join/index.html',
       githubURL: 'https://github.com/ViliaZ/join-kanbanBoard',
       count: '01',
       description: 'JOIN is a WebApp, inspired by the popular Kanban System for project- and personal management. It implements drag and drop lists, the creation of user boards and a user dashboard. Firebase is used for database and authorisation.',
@@ -21,7 +21,7 @@ export class ProjectsService {
     {
       title: 'crypto converter',
       subtitle: 'API based Crypto Web-App',
-      url: 'https://vilia-zeisig.com/kanban',
+      url: 'https://vilia-zeisig.com/tokenx/index.html',
       githubURL: 'https://github.com/ViliaZ/tokenx',
       count: '02',
       description: 'Responsive WebApp based on the Coingecko-API (RestAPI). Users can search for Crytocurrencies & convert them to Fiat. Results are displayed in forms of texts, graphs and tables.',
@@ -31,8 +31,8 @@ export class ProjectsService {
     {
       title: 'jump and run game',
       subtitle: 'Object Oriented JavaScript',
-      url: 'https://github.com/ViliaZ/game-sharky',
-      githubURL: 'https://github.com/ViliaZ/sharkygame',
+      url: 'https://vilia-zeisig.com/sharky/welcome.html',
+      githubURL: 'https://github.com/ViliaZ/game-sharky',
       count: '03',
       description: 'SHARKY has been my first project to implement an object oriented approach with JavaScript. The result is a funny little game to play in your web browser or on any mobile device.',
       image: 'assets/img/projects/sharky-image.png',

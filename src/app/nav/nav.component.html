@@ -7,8 +7,8 @@
     <div class="linksWrapper" [class.mobileOpen]="!!mobileMenuOpen">
         <div class="links hover"  [class.mobileOpen]="!!mobileMenuOpen" [class.mobile]="isMobile700">
             <a (click)="navigation.forceNavigate('aboutme'); toggleMenu('close')" routerLink="/#aboutme">ABOUT</a>
-            <a (click)="navigation.forceNavigate('portfolio'); toggleMenu('close')" routerLink="/#portfolio">PORTFOLIO</a>
             <a (click)="navigation.forceNavigate('skills'); toggleMenu('close')" routerLink="/#skills">SKILLS</a>
+            <a (click)="navigation.forceNavigate('portfolio'); toggleMenu('close')" routerLink="/#portfolio">PORTFOLIO</a>
             <a *ngIf="isMobile700" (click)="navigation.forceNavigate('contact'); toggleMenu('close')" routerLink="/#contact">CONTACT</a>
             <app-img-opentowork *ngIf="!isMobile700" (click)="navigation.forceNavigate('contact')" routerLink="/#contact"></app-img-opentowork>
         </div>
