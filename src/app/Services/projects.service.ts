@@ -11,7 +11,7 @@ export class ProjectsService {
     {
       title: 'kanban board',
       subtitle: 'Project Managment',
-      url: 'https://vilia-zeisig.com/join/index.html',
+      url: 'https://vilia-zeisig.com/join/login',
       githubURL: 'https://github.com/ViliaZ/join-kanbanBoard',
       count: '01',
       description: 'JOIN is a WebApp, inspired by the popular Kanban System for project- and personal management. It implements drag and drop lists, the creation of user boards and a user dashboard. Firebase is used for database and authorisation.',
