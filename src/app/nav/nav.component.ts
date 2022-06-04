@@ -31,7 +31,7 @@ export class NavComponent implements OnInit {
     if(request == 'close' && this.mobileMenuOpen) {
       this.mobileMenuOpen = false;
     } else{
-      this.mobileMenuOpen == false ? this.mobileMenuOpen = false : this.mobileMenuOpen = true;
+      this.mobileMenuOpen == false ? this.mobileMenuOpen = true : this.mobileMenuOpen = false;
     }
   }
 

@@ -11,7 +11,7 @@ export class ProjectsService {
     {
       title: 'kanban board',
       subtitle: 'Project Managment',
-      url: 'https://vilia-zeisig.com/join/login',
+      url: 'https://join.vilia-zeisig.com/login',
       githubURL: 'https://github.com/ViliaZ/join-kanbanBoard',
       count: '01',
       description: 'JOIN is a WebApp, inspired by the popular Kanban System for project- and personal management. It implements drag and drop lists, the creation of user boards and a user dashboard. Firebase is used for database and authorisation.',
@@ -21,7 +21,7 @@ export class ProjectsService {
     {
       title: 'crypto converter',
       subtitle: 'API based Crypto Web-App',
-      url: 'https://vilia-zeisig.com/tokenx/index.html',
+      url: 'https://vilia-zeisig.com/tokenx/',
       githubURL: 'https://github.com/ViliaZ/tokenx',
       count: '02',
       description: 'Responsive WebApp based on the Coingecko-API (RestAPI). Users can search for Crytocurrencies & convert them to Fiat. Results are displayed in forms of texts, graphs and tables.',
