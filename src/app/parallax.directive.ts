@@ -29,9 +29,7 @@ export class ParallaxDirective {
     this.breakpointobserver.observe(['(min-width: 1000px)','(min-width: 850px)','(min-width: 675px)','(min-width: 550px)','(min-width: 400px)'])
       .subscribe((state: BreakpointState) => {
       if (state.breakpoints['(min-width: 1000px)'] == true) {
-        this.responsiveFaktor = 17;
-        console.log('breakpoint: 1000px');
-        
+        this.responsiveFaktor = 17;        
       }
        else if (state.breakpoints['(min-width: 850px)'] == true) {
         this.responsiveFaktor = 19;

@@ -13,7 +13,7 @@
             <app-img-opentowork *ngIf="!isMobile700" (click)="navigation.forceNavigate('contact')" routerLink="/#contact"></app-img-opentowork>
         </div>
 
-    <!-- hamburger icon -->
+    <!-- MOBILE MENUhamburger icon -->
     <div *ngIf="isMobile700" class="hamburgerMenu three col" (click)="toggleMenu()">
         <div [class.is-active]="mobileMenuOpen" class="hamburger" id="hamburger-6">
             <span class="line"></span>
