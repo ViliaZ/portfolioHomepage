@@ -126,6 +126,7 @@ a {
         }
     }
 
+    // Email Adress vzeisig@gmail.com
     &:after {
         position: absolute;
         content: "vzeisig@gmail.com";
@@ -135,7 +136,7 @@ a {
         transform-origin: top left;
         font-weight: 200;
         letter-spacing: 3px;
-        filter: opacity(0.7);
+        filter: opacity(0.8);
         animation: show-up 350ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         animation-delay: 1300ms;
 
@@ -270,15 +271,15 @@ h1 {
     padding-left: var(--padding-Middle);
 }
 
-// ****** SCROLL SVG Mouse ******
-#scrollSVG {
+// ****** SCROLL IMG Mouse ******
+#scrollMouse {
     position: absolute;
     right: 37px;
     bottom: 80px;
-    width: 40px !important;
+    width: 38px !important;
     z-index: 111;
     animation: moveUpDown 2s infinite linear alternate-reverse;
-    filter: invert(1) opacity(1) blur(0);
+    filter: opacity(0.8) blur(0);
     transition: 820ms ease-in-out;
 
     @media only screen and (max-width: 600px) {
@@ -286,12 +287,7 @@ h1 {
     }
 
     &.isScrolling {
-        filter: invert(1) opacity(0) blur(4px);
-    }
-
-    path {
-        fill: var(--primary-light);
-        filter: invert(1);
+        filter: opacity(0) blur(4px);
     }
 }
 
@@ -302,7 +298,7 @@ h1 {
     }
     to {
         bottom: 90px;
-        opacity: 1;
+        opacity: 0.8;
     }
 }
 
