@@ -67,11 +67,4 @@ export class ContactComponent implements OnInit {
     arrayOfInputs.forEach((input) => (input.nativeElement.value = ''));
   }
 
-  // closeConfirmation(event: any) {
-  //   if (event.target.id == 'confirmationContainer') {
-  //     this.successfullySend = false;
-  //   }
-  // }
-
-
 }
