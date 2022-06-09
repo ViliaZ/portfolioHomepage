@@ -38,6 +38,13 @@ export class NavComponent implements OnInit {
       this.mobileMenuOpen = false;
     } else {
       this.mobileMenuOpen = !this.mobileMenuOpen;
+<<<<<<< HEAD
+=======
+
+      // this.mobileMenuOpen == false
+      //   ? (this.mobileMenuOpen = true)
+      //   : (this.mobileMenuOpen = false);
+>>>>>>> c2c07bc98bdcdcf8f6def75e0a5283090f988925
     }
   }
 }
