@@ -8,8 +8,6 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class LandingpageComponent implements OnInit {
 
-
-
   constructor(private route: ActivatedRoute) {
    }
 
