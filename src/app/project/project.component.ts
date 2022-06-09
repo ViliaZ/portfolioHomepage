@@ -28,7 +28,6 @@ export class ProjectComponent implements OnInit {
   }
 
   observeBreakpoints(): any {
-
     this.breakpointobserver.observe(['(max-width: 500px)', '(max-width: 800px)', '(min-width: 1000px)', '(max-width: 1000px)'])
       .subscribe((state: BreakpointState) => {
 
@@ -36,10 +35,7 @@ export class ProjectComponent implements OnInit {
 
         if (state.breakpoints['(max-width: 500px)'] == true) {
           this.mobile500 = true;
-          // this.tokenIMG ? this.tokenIMG.nativeElement.style.transform = "translateY(3em)" : this.tokenIMG.nativeElement.style.transform = 'undefined'
           joinImage.style.transform = "translateY(1em)";
-          console.log(joinImage);
-          
         }
         if (state.breakpoints['(min-width: 1000px)'] == true) {
           this.desktop1000 = true;

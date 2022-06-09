@@ -14,7 +14,6 @@ export class IntersectionObserverService   {
     );
   };
 
-
   constructor() { }
 
   createIntersectionObserver(observedElements: any) {
@@ -27,7 +26,6 @@ export class IntersectionObserverService   {
 
     this.observer = new IntersectionObserver(this.callback, options);
     this.observer.observe(observedElements.nativeElement);
-  
   }
 
   ngOnDestroy(): void {

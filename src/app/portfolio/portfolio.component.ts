@@ -23,7 +23,4 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
     
   }
 
-
-
-
 }
