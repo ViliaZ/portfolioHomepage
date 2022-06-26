@@ -1,0 +1,265 @@
+
+// TODO: Refactor parallax code here!! Find a way to use a parallax library
+// Important: Need to be responsive!! --> problem with libraries and my use case
+
+
+// hero section
+h1 {
+    font-size: calc(5em + 2.2vw);
+    font-weight: var(--font-xbold);
+    letter-spacing: -0.09em;
+    color: #cbcbcb;
+}
+
+// white Headlines except hero section
+h2 {
+    font-size: calc(2em + 3vw);
+    letter-spacing: -0.09em;
+    white-space: nowrap;
+    margin-bottom: 12px;
+    z-index: 200;
+
+    @media only screen and (max-width: 1000px) {
+        text-align: center !important;
+    }
+
+    @media only screen and (max-width: 500px) {
+        line-height: 1.45em;
+        margin-top: 0.3em;
+    }
+}
+
+// WATERMARK headlines except hero section
+h3 {
+    position: absolute;
+    top: 0;
+    font-size: calc(1em + 9vw);
+    font-weight: var(--font-xbold);
+    letter-spacing: -3px;
+    color: var(--primary-light);
+    filter: opacity(0.15);
+    white-space: nowrap;
+    z-index: 0;
+
+    &.h3Right {
+        left: 50%;
+        transform: translateX(-50%) translateY(0.7em);
+
+        @media only screen and (min-width: 400px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(0.65em);
+        }
+
+        @media only screen and (min-width: 500px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(0.4em);
+        }
+        @media only screen and (min-width: 1000px) {
+            left: unset;
+            right: 0;
+            transform: translateX(calc(var(--paddingMain) + 0.2em)) translateY(0.3em) !important;
+        }
+        @media only screen and (min-width: 1200px) {
+            left: unset;
+            right: 0;
+            transform: translateX(calc(var(--paddingMain) + 0.2em)) translateY(0.23em) !important;
+        }
+        @media only screen and (min-width: 1450px) {
+            right: 50%;
+            transform: translateX(50%) translateY(0.3em) !important;
+        }
+        @media only screen and (min-width: 1600px) {
+            right: 50%;
+            transform: translateX(50%) translateY(0.34em) !important;
+            font-size: 9em;
+        }
+        @media only screen and (min-width: 1800px) {
+            right: 50%;
+            transform: translateX(50%) translateY(0.44em) !important;
+        }
+    }
+
+    &.h3Left {
+        left: 50%;
+        transform: translateX(-50%) translateY(2.3em) !important;
+
+        &.contact {
+            left: 50%;
+            transform: translateX(-50%) translateY(3.4em) !important;
+        }
+        @media only screen and (min-width: 320px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(2.1em) !important;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(2.82em) !important;
+            }
+        }
+        @media only screen and (min-width: 400px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(2.4em) !important;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(3.45em) !important;
+            }
+        }
+        @media only screen and (min-width: 500px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(1.6em) !important;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(2.6em) !important;
+            }
+        }
+        @media only screen and (min-width: 650px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(2em) !important;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(3.36em) !important;
+            }
+        }
+        @media only screen and (min-width: 750px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(2.1em) !important;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(3.1em) !important;
+            }
+        }
+        @media only screen and (min-width: 900px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(2.2em) !important;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(4.04em) !important;
+            }
+        }
+        @media only screen and (min-width: 1000px) {
+            left: 0;
+            transform: translateX(calc(var(--paddingMain) * (-1) - 0.2em)) translateY(1.65em) !important;
+
+            &.contact {
+                left: 0;
+                transform: translateX(calc(var(--paddingMain) * (-1) - 0.2em)) translateY(2.65em) !important;
+            }
+        }
+        @media only screen and (min-width: 1150px) {
+            left: 0;
+            transform: translateX(calc(var(--paddingMain) * (-1) - 0.2em)) translateY(1.45em) !important;
+
+            &.contact {
+                left: 0;
+                transform: translateX(calc(var(--paddingMain) * (-1) - 0.2em)) translateY(2.3em) !important;
+            }
+        }
+        @media only screen and (min-width: 1280px) {
+            left: 0;
+            transform: translateX(calc(var(--paddingMain) * (-1) - 0.2em)) translateY(1.1em) !important;
+            &.contact {
+                left: 0;
+                transform: translateX(calc(var(--paddingMain) * (-1) - 0.2em)) translateY(1.8em) !important;
+            }
+        }
+        // beyond 13 Inch Laptop
+        @media only screen and (min-width: 1450px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(1.1em) !important;
+            transform-origin: left;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(1.8em) !important;
+            }
+        }
+        @media only screen and (min-width: 1600px) {
+            font-size: 9em;
+        }
+        // beyond 13 Inch Laptop
+        @media only screen and (min-width: 1650px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(1.1em) !important;
+            transform-origin: left;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(1.6em) !important;
+            }
+        }
+        @media only screen and (min-width: 1800px) {
+            left: 50%;
+            transform: translateX(-50%) translateY(1.6em) !important;
+            transform-origin: left;
+
+            &.contact {
+                left: 50%;
+                transform: translateX(-50%) translateY(2.2em) !important;
+            }
+        }
+
+    }
+
+    &.h3Center {
+        left: 50%;
+        transform: translateX(-50%) translateY(calc(2.85em)) !important;
+        transform-origin: left;
+
+        @media only screen and (min-width: 320px) {
+            transform: translateX(-50%) translateY(2.42em) !important;
+        }
+        @media only screen and (min-width: 400px) {
+            transform: translateX(-50%) translateY(2.85em) !important;
+        }
+        @media only screen and (min-width: 500px) {
+            transform: translateX(-50%) translateY(2em) !important;
+        }
+        @media only screen and (min-width: 600px) {
+            transform: translateX(-50%) translateY(2.55em) !important;
+        }
+        @media only screen and (min-width: 750px) {
+            transform: translateX(-50%) translateY(2.8em) !important;
+        }
+        @media only screen and (min-width: 900px) {
+            transform: translateX(-50%) translateY(3em) !important;
+        }
+        @media only screen and (min-width: 1000px) {
+            transform: translateX(-50%) translateY(2.2em) !important;
+        }
+        @media only screen and (min-width: 1150px) {
+            transform: translateX(-50%) translateY(1.9em) !important;
+        }
+        @media only screen and (min-width: 1280px) {
+            transform: translateX(-50%) translateY(2.25em) !important;
+        }
+        @media only screen and (min-width: 1400px) {
+            transform: translateX(-50%) translateY(1.5em) !important;
+        }
+        @media only screen and (min-width: 1600px) {
+            transform: translateX(-50%) translateY(1.42em) !important;
+            font-size: 9em;
+        }
+        @media only screen and (min-width: 1600px) {
+            transform: translateX(-50%) translateY(2.2em) !important;
+            font-size: 9em;
+        }
+    }
+}
+
+// small details
+h4 {
+    font-size: 14px;
+    font-weight: var(--font-light);
+    letter-spacing: 3px;
+
+    @media only screen and (max-width: 1000px) {
+        text-align: center !important;
+    }
+}
+
+
