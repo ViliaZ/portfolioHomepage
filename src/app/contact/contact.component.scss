@@ -5,6 +5,7 @@
     max-width: var(--maxwidth);
     padding-top: calc(var(--paddingMain) - 2em);
     padding-bottom: 15vw;
+    overflow: hidden;
 
     @media only screen and (max-width: 1000px) {
         flex-direction: column;
@@ -239,6 +240,7 @@ button {
     transform: translateY(1000px);
     transition: all ease-in-out 300ms;
     opacity: 0;
+    overflow:hidden;
 
     span {
         display: inline-block;
